@@ -1,0 +1,92 @@
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Tech Zone Live</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Place favicon.ico in the root directory -->
+<link rel="shortcut icon" type="image/x-icon" href="../techzonelive/assets/img/favicon.png">
+<!-- CSS here -->
+<link rel="stylesheet" href="../techzonelive/assets/css/bootstrap.css">
+<link rel="stylesheet" href="../techzonelive/assets/css/meanmenu.css">
+<link rel="stylesheet" href="../techzonelive/assets/css/animate.css">
+<link rel="stylesheet" href="../techzonelive/assets/css/slick.css">
+<link rel="stylesheet" href="../techzonelive/assets/css/backtotop.css">
+<link rel="stylesheet" href="../techzonelive/assets/css/magnific-popup.css">
+<link rel="stylesheet" href="../techzonelive/assets/css/nice-select.css">
+<link rel="stylesheet" href="../techzonelive/assets/css/ui-icon.css">
+<link rel="stylesheet" href="../techzonelive/assets/css/elegentfonts.css">
+<link rel="stylesheet" href="../techzonelive/assets/css/font-awesome-pro.css">
+<link rel="stylesheet" href="../techzonelive/assets/css/spacing.css">
+<link rel="stylesheet" href="../techzonelive/assets/css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+   $(document).on("click", "#subscribe", function () {
+      // console.log("Am clicked")
+      var userEmail = $("#user-email").val();
+      console.log(userEmail);
+
+      if (userEmail == "") {
+         swal({
+            title: "Invalid Email",
+            text: "Please Enter Email!",
+            icon: "error",
+            dangerMode: true,
+            button: "Ok",
+         });
+      } else {
+         if (userEmail.length >= 50) {
+            swal({
+               title: "Invalid Email",
+               text: "Enter Correct Email!",
+               icon: "error",
+               dangerMode: true,
+               button: "Ok",
+            });
+         } else {
+            if (userEmail.length <= 4) {
+               swal({
+                  title: "Invalid Email",
+                  text: "Enter Correct Email!",
+                  icon: "error",
+                  dangerMode: true,
+                  button: "Ok",
+               });
+            } else {
+               if (userEmail.indexOf('@') <= 0) {
+                  swal({
+                     title: "Invalid Email",
+                     text: "Enter Correct Email!",
+                     icon: "error",
+                     dangerMode: true,
+                     button: "Ok",
+                  });
+               } else {
+                  if ((userEmail.charAt(userEmail.length - 4) != ".") && (userEmail.charAt(userEmail.length - 3) != ".")) {
+                     swal({
+                        title: "Invalid Email",
+                        text: "Enter Correct Email!",
+                        icon: "error",
+                        dangerMode: true,
+                        button: "Ok",
+                     });
+                  } else {
+                     swal({
+                        title: "Submitted!",
+                        icon: "success",
+                        dangerMode: false,
+                        button: "Ok",
+                     }).then((result) => {
+                        if (result) {
+                           location.reload();
+                        }
+                     })
+                  }
+               }
+
+            }
+         }
+      }
+   })
+</script>

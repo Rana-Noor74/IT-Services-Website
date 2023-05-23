@@ -1,0 +1,86 @@
+<div class="footer-bg theme-bg bg-bottom" data-background="../techzonelive/assets/img/bg/shape-bg-02.png">
+    <div class="f-border pt-40">
+       <div class="container">
+          <div class="row">
+             <div class="col-xl-4 col-md-4">
+                <div class="footer-widget footer-col-1 mb-50">
+                   <div class="footer-widget__text mb-35">
+                      <h3 class="footer-widget__title">Quick Links</h3>
+                   </div>
+                   <div class="footer-widget__link">
+                      <ul>
+                         <li><a href="/about-us">About us</a></li>
+                         <li><a href="/blogs">Blog</a></li>
+                         <li><a href="/services">Services</a></li>
+                         <li><a href="/faq">FAQ's</a></li>
+                         <li><a href="/contact-us">Contact Us</a></li>
+
+                      </ul>
+                   </div>
+                </div>
+             </div>
+             <div class="col-xl-4 col-md-4">
+                <div class="footer-widget footer-col-2 mb-50">
+                   <div class="footer-widget__text mb-35">
+                      <h3 class="footer-widget__title">Services</h3>
+                   </div>
+                   <div class="footer-widget__link">
+                      <ul>
+                         <li><a href="/services#software-development">Software Development</a></li>
+                         <li><a href="/services#mobile-development">Mobile Developments</a></li>
+                         <li><a href="/services#amazon-lamda">Amazon Lambda</a></li>
+                         <li><a href="/services#dev-ops">DevOps</a></li>
+                      </ul>
+                   </div>
+                </div>
+             </div>
+             <div class="col-xl-4 col-lg-4 col-md-8">
+                <div class="footer-widget footer-col-4  mb-50">
+                   <div class="footer-widget__text mb-35">
+                      <h3 class="footer-widget__title">Support</h3>
+                   </div>
+                   <p>Subscribe to our NewsLetter to get new updates!</p>
+                   <div class="footer-widget__f-newsletter mb-40">
+                      <form>
+                        <span><i class="icon_mail_alt"></i></span>
+                        <input type="email" id="user-email" placeholder="Enter your email">
+                        <button type="button" id="subscribe" class="footer-widget__submit tp-border-btn2">Subscribe Now</button>
+                      </form>
+                   </div>
+                   <div class="footer-widget__social d-flex align-items-center">
+                         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                         <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                         <a href="#"><i class="fa-light fa-basketball"></i></a>
+                         <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="f-copyright pt-20 pb-10">
+       <div class="container">
+          <div class="row">
+             <div class="col-md-5">
+                <div class="f-copyright__logo">
+                   <a href="/">
+                     <img src="../techzonelive/assets/img/logo/vit.png" style="height: 70px;" alt="logo">
+                   </a>
+                  </a>
+                </div>
+             </div>
+             <div class="col-md-7">
+                <div class="f-copyright__text text-md-end mt-20">
+                   <span>Copyright © <a href="/">techzonelive.com</a>  <span id="yearCurrent"></span>, All Rights Reserved</span>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <script>
+       const d = new Date();
+    let year = d.getFullYear();
+   //  console.log(year)
+    document.getElementById("yearCurrent").innerHTML = year;
+ </script>
